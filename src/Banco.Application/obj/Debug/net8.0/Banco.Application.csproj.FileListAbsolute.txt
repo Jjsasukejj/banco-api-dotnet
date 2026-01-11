@@ -13,3 +13,4 @@
 /Users/juliocadena/Documents/Devsu LLC/BancoSolution/src/Banco.Application/obj/Debug/net8.0/refint/Banco.Application.dll
 /Users/juliocadena/Documents/Devsu LLC/BancoSolution/src/Banco.Application/obj/Debug/net8.0/Banco.Application.pdb
 /Users/juliocadena/Documents/Devsu LLC/BancoSolution/src/Banco.Application/obj/Debug/net8.0/ref/Banco.Application.dll
+/Users/juliocadena/Documents/Devsu LLC/BancoSolution/src/Banco.Application/obj/Debug/net8.0/Banco.Application.sourcelink.json

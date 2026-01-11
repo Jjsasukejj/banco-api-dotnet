@@ -9,3 +9,4 @@
 /Users/juliocadena/Documents/Devsu LLC/BancoSolution/src/Banco.Domain/obj/Debug/net8.0/refint/Banco.Domain.dll
 /Users/juliocadena/Documents/Devsu LLC/BancoSolution/src/Banco.Domain/obj/Debug/net8.0/Banco.Domain.pdb
 /Users/juliocadena/Documents/Devsu LLC/BancoSolution/src/Banco.Domain/obj/Debug/net8.0/ref/Banco.Domain.dll
+/Users/juliocadena/Documents/Devsu LLC/BancoSolution/src/Banco.Domain/obj/Debug/net8.0/Banco.Domain.sourcelink.json

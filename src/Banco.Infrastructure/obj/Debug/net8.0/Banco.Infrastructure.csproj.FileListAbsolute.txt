@@ -15,3 +15,4 @@
 /Users/juliocadena/Documents/Devsu LLC/BancoSolution/src/Banco.Infrastructure/obj/Debug/net8.0/refint/Banco.Infrastructure.dll
 /Users/juliocadena/Documents/Devsu LLC/BancoSolution/src/Banco.Infrastructure/obj/Debug/net8.0/Banco.Infrastructure.pdb
 /Users/juliocadena/Documents/Devsu LLC/BancoSolution/src/Banco.Infrastructure/obj/Debug/net8.0/ref/Banco.Infrastructure.dll
+/Users/juliocadena/Documents/Devsu LLC/BancoSolution/src/Banco.Infrastructure/obj/Debug/net8.0/Banco.Infrastructure.sourcelink.json

@@ -37,3 +37,4 @@
 /Users/juliocadena/Documents/Devsu LLC/BancoSolution/src/Banco.Api/obj/Debug/net8.0/Banco.Api.pdb
 /Users/juliocadena/Documents/Devsu LLC/BancoSolution/src/Banco.Api/obj/Debug/net8.0/Banco.Api.genruntimeconfig.cache
 /Users/juliocadena/Documents/Devsu LLC/BancoSolution/src/Banco.Api/obj/Debug/net8.0/ref/Banco.Api.dll
+/Users/juliocadena/Documents/Devsu LLC/BancoSolution/src/Banco.Api/obj/Debug/net8.0/Banco.Api.sourcelink.json

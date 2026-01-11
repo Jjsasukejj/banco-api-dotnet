@@ -101,3 +101,4 @@
 /Users/juliocadena/Documents/Devsu LLC/BancoSolution/src/Banco.Tests/obj/Debug/net8.0/Banco.Tests.pdb
 /Users/juliocadena/Documents/Devsu LLC/BancoSolution/src/Banco.Tests/obj/Debug/net8.0/Banco.Tests.genruntimeconfig.cache
 /Users/juliocadena/Documents/Devsu LLC/BancoSolution/src/Banco.Tests/obj/Debug/net8.0/ref/Banco.Tests.dll
+/Users/juliocadena/Documents/Devsu LLC/BancoSolution/src/Banco.Tests/obj/Debug/net8.0/Banco.Tests.sourcelink.json
