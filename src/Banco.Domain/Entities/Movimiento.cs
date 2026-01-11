@@ -1,3 +1,4 @@
+using Banco.Domain.Base;
 using Banco.Domain.Enums;
 
 namespace Banco.Domain.Entities
@@ -6,7 +7,7 @@ namespace Banco.Domain.Entities
     /// Representa un movimiento financiero realizado sobre una cuenta
     /// registra el valor del movimiento y el sando resultante
     /// </summary>
-    public class Movimiento
+    public class Movimiento : EntityBase
     {
         /// <summary>
         /// Fecha del movimiento financiero

@@ -1,9 +1,16 @@
+using Banco.Infrastructure.Data;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+//Registrar BancoDbContext en el contenedor de dependencias
+//Se configura EF Core para usar Sql Server tomando la cadena de conexion desde el appsettings.json
+builder.Services.AddDbContext<BancoDbContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 var app = builder.Build();
 
