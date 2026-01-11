@@ -1,0 +1,56 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "Banco.Infrastructure/1.0.0": {
+        "dependencies": {
+          "Banco.Application": "1.0.0",
+          "Banco.Domain": "1.0.0"
+        },
+        "runtime": {
+          "Banco.Infrastructure.dll": {}
+        }
+      },
+      "Banco.Application/1.0.0": {
+        "dependencies": {
+          "Banco.Domain": "1.0.0"
+        },
+        "runtime": {
+          "Banco.Application.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Banco.Domain/1.0.0": {
+        "runtime": {
+          "Banco.Domain.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Banco.Infrastructure/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Banco.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Banco.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

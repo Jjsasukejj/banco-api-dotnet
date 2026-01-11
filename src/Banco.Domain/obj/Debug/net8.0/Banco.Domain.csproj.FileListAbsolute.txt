@@ -1,0 +1,11 @@
+/Users/juliocadena/Documents/Devsu LLC/BancoSolution/src/Banco.Domain/bin/Debug/net8.0/Banco.Domain.deps.json
+/Users/juliocadena/Documents/Devsu LLC/BancoSolution/src/Banco.Domain/bin/Debug/net8.0/Banco.Domain.dll
+/Users/juliocadena/Documents/Devsu LLC/BancoSolution/src/Banco.Domain/bin/Debug/net8.0/Banco.Domain.pdb
+/Users/juliocadena/Documents/Devsu LLC/BancoSolution/src/Banco.Domain/obj/Debug/net8.0/Banco.Domain.GeneratedMSBuildEditorConfig.editorconfig
+/Users/juliocadena/Documents/Devsu LLC/BancoSolution/src/Banco.Domain/obj/Debug/net8.0/Banco.Domain.AssemblyInfoInputs.cache
+/Users/juliocadena/Documents/Devsu LLC/BancoSolution/src/Banco.Domain/obj/Debug/net8.0/Banco.Domain.AssemblyInfo.cs
+/Users/juliocadena/Documents/Devsu LLC/BancoSolution/src/Banco.Domain/obj/Debug/net8.0/Banco.Domain.csproj.CoreCompileInputs.cache
+/Users/juliocadena/Documents/Devsu LLC/BancoSolution/src/Banco.Domain/obj/Debug/net8.0/Banco.Domain.dll
+/Users/juliocadena/Documents/Devsu LLC/BancoSolution/src/Banco.Domain/obj/Debug/net8.0/refint/Banco.Domain.dll
+/Users/juliocadena/Documents/Devsu LLC/BancoSolution/src/Banco.Domain/obj/Debug/net8.0/Banco.Domain.pdb
+/Users/juliocadena/Documents/Devsu LLC/BancoSolution/src/Banco.Domain/obj/Debug/net8.0/ref/Banco.Domain.dll
