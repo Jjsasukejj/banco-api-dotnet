@@ -1,6 +1,7 @@
 using Banco.Application.Interfaces.Repositories;
 using Banco.Application.Services;
 using Banco.Infrastructure.Data;
+using Banco.Infrastructure.Pdf;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -15,6 +16,10 @@ builder.Services.AddDbContext<BancoDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 //registro del servicio de movimiento, con scoped comparto el mismo DbContext durante la request
 builder.Services.AddScoped<IMovimientoService, MovimientoService>();
+//Servicio de reportes
+builder.Services.AddScoped<IReporteService, ReporteService>();
+//Servicio de PDF
+builder.Services.AddScoped<IPdfGenerator, PdfGenerator>();
 
 var app = builder.Build();
 
