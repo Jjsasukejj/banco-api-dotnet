@@ -1,3 +1,5 @@
+using Banco.Application.Interfaces.Repositories;
+using Banco.Application.Services;
 using Banco.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 
@@ -11,6 +13,8 @@ builder.Services.AddSwaggerGen();
 //Se configura EF Core para usar Sql Server tomando la cadena de conexion desde el appsettings.json
 builder.Services.AddDbContext<BancoDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+//registro del servicio de movimiento, con scoped comparto el mismo DbContext durante la request
+builder.Services.AddScoped<IMovimientoService, MovimientoService>();
 
 var app = builder.Build();
 
