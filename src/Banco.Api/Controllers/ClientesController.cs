@@ -74,6 +74,15 @@ namespace Banco.Api.Controllers
                 return BadRequest("ClienteId es obligatorio.");
             }
 
+            //Valida si ya existe un clinete con el mismo ClienteId
+            var existeCliente = await unitOfWork.Clientes.ExisteClienteIdAsync(request.ClienteId);
+
+            if (existeCliente)
+            {
+                //Error de negocio controlado
+                return BadRequest($"Ya existe un cliente con ClienteId {request.ClienteId}");
+            }
+
             var cliente = new Cliente
             (
                 request.ClienteId,

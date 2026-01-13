@@ -37,7 +37,8 @@ namespace Banco.Infrastructure.Configurations
             //se define explicitamente la clave foranea ClienteId
             builder.HasMany(x => x.Cuentas)
                    .WithOne(x => x.Cliente)
-                   .HasForeignKey(x => x.ClienteId);
+                   .HasForeignKey(x => x.ClienteId)
+                   .HasPrincipalKey(x => x.ClienteId);
         }
     }
 }

@@ -11,6 +11,6 @@ namespace Banco.Application.DTOs.Cuentas
         public TipoCuenta TipoCuenta { get; set; }
         public decimal SaldoInicial { get; set; }
         public bool Estado { get; set; }
-        public int ClienteId { get; set; }
+        public string ClienteId { get; set; } = string.Empty;
     }
 }

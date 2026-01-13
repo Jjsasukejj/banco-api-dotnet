@@ -1,0 +1,43 @@
+version: "3.8"
+
+services:
+  # =========================
+  # Contenedor de SQL Server
+  # =========================
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: banco_sql
+    environment:
+      # Password obligatorio para SQL Server en Linux
+      SA_PASSWORD: "Password123!"
+      ACCEPT_EULA: "Y"
+    ports:
+      # Puerto local:puerto contenedor
+      - "1433:1433"
+    volumes:
+      # Persistimos data para que no se pierda al bajar el contenedor
+      - sql_data:/var/opt/mssql
+
+  # =========================
+  # Contenedor de la API .NET
+  # =========================
+  api:
+    build:
+      # Contexto: la raiz del repo donde esta el Dockerfile
+      context: .
+      dockerfile: Dockerfile
+    container_name: banco_api
+    depends_on:
+      - sqlserver
+    ports:
+      # Accederemos a la API desde el host en http://localhost:8080
+      - "8080:80"
+    environment:
+      # Sobrescribe appsettings.json sin tocar código
+      #Escucha en el puerto 80
+      ASPNETCORE_URLS: "http://+:80"
+      # Server=sqlserver usa el DNS interno del compose (nombre del service)
+      ConnectionStrings__DefaultConnection: "Server=sqlserver;Database=BancoDb;User Id=sa;Password=Password123!;TrustServerCertificate=True"
+
+volumes:
+  sql_data:

@@ -14,5 +14,11 @@ namespace Banco.Application.Interfaces.Repositories
         /// <param name="clienteId"></param>
         /// <returns></returns>
         Task<Cliente?> GetByClienteIdAsync(string clienteId);
+        /// <summary>
+        /// Verifica si ya existe un cliente con el ClienteId especificado
+        /// </summary>
+        /// <param name="clienteId"></param>
+        /// <returns></returns>
+        Task<bool> ExisteClienteIdAsync(string clienteId);
     }
 }

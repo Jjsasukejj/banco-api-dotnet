@@ -28,7 +28,7 @@ namespace Banco.Domain.Entities
         /// <summary>
         /// Relacion con el cliente propietario
         /// </summary>
-        public int ClienteId { get; private set; }
+        public string ClienteId { get; private set; } = string.Empty;
         public Cliente? Cliente { get; private set; }
         /// <summary>
         /// Movimientos asociados a la cuenta
@@ -53,7 +53,7 @@ namespace Banco.Domain.Entities
             TipoCuenta tipoCuenta,
             decimal saldo,
             bool estado,
-            int clienteId)
+            string clienteId)
         {
             NumeroCuenta = numeroCuenta;
             TipoCuenta = tipoCuenta;

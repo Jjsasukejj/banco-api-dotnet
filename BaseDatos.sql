@@ -22,7 +22,8 @@ CREATE TABLE [Clientes] (
     [Identificacion] nvarchar(max) NOT NULL,
     [Direccion] nvarchar(max) NOT NULL,
     [Telefono] nvarchar(max) NOT NULL,
-    CONSTRAINT [PK_Clientes] PRIMARY KEY ([Id])
+    CONSTRAINT [PK_Clientes] PRIMARY KEY ([Id]),
+    CONSTRAINT [AK_Clientes_ClienteId] UNIQUE ([ClienteId])
 );
 GO
 
@@ -32,9 +33,9 @@ CREATE TABLE [Cuentas] (
     [TipoCuenta] int NOT NULL,
     [Saldo] decimal(18,2) NOT NULL,
     [Estado] bit NOT NULL,
-    [ClienteId] int NOT NULL,
+    [ClienteId] nvarchar(20) NOT NULL,
     CONSTRAINT [PK_Cuentas] PRIMARY KEY ([Id]),
-    CONSTRAINT [FK_Cuentas_Clientes_ClienteId] FOREIGN KEY ([ClienteId]) REFERENCES [Clientes] ([Id]) ON DELETE CASCADE
+    CONSTRAINT [FK_Cuentas_Clientes_ClienteId] FOREIGN KEY ([ClienteId]) REFERENCES [Clientes] ([ClienteId]) ON DELETE CASCADE
 );
 GO
 
@@ -63,7 +64,7 @@ CREATE INDEX [IX_Movimientos_CuentaId] ON [Movimientos] ([CuentaId]);
 GO
 
 INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
-VALUES (N'20260112041051_InitialCreate', N'8.0.0');
+VALUES (N'20260113031617_InitialCreate', N'8.0.0');
 GO
 
 COMMIT;

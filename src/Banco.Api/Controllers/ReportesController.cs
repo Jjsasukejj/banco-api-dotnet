@@ -18,7 +18,7 @@ namespace Banco.Api.Controllers
             this.reporteService = reporteService;
         }
         [HttpGet]
-        public async Task<IActionResult> ObtenerReporte([FromQuery] string clienteId, [FromQuery] DateTime fechaInicio, [FromBody] DateTime fechaFin)
+        public async Task<IActionResult> ObtenerReporte([FromQuery] string clienteId, [FromQuery] DateTime fechaInicio, [FromQuery] DateTime fechaFin)
         {
             try
             {

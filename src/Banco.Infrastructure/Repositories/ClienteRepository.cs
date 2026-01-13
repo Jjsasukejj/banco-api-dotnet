@@ -14,6 +14,13 @@ namespace Banco.Infrastructure.Repositories
         {
         }
 
+        public async Task<bool> ExisteClienteIdAsync(string clienteId)
+        {
+            //Verifica si ya existe un clinente con el mismo CLienteId
+            return await bancoDbContext.Clientes
+                .AnyAsync(x => x.ClienteId == clienteId);
+        }
+
         public async Task<Cliente?> GetByClienteIdAsync(string clienteId)
         {
             //Obtiene un cliente a partir de su identificador (ClienteId) incluyendo sus cuentas asociadas
