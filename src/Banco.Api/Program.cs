@@ -31,6 +31,17 @@ builder.Services.AddScoped<ICuentaRepository, CuentaRepository>();
 builder.Services.AddScoped<IMovimientoRepository, MovimientoRepository>();
 //Unidad de trabajo
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+//Configuracion de CORS, para permitir que frontend Angular consuma esta API
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAngularApp", policy =>
+    {
+        policy
+            .WithOrigins("http://localhost:4200") //origen permitido
+            .AllowAnyHeader()                     //headers permitidos 
+            .AllowAnyMethod();                    //GET, POST, PUT, PATCH, DELETE
+    });
+});
 
 var app = builder.Build();
 
@@ -42,6 +53,8 @@ if (app.Environment.IsDevelopment())
 }
 // habilita el enrutamiento
 app.UseRouting();
+//Middleware de CORS
+app.UseCors("AllowAngularApp");
 // mapea todos los controllers
 app.MapControllers();
 
