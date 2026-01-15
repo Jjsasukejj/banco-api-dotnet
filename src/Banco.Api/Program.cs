@@ -5,8 +5,10 @@ using Banco.Infrastructure.Data;
 using Banco.Infrastructure.Pdf;
 using Banco.Infrastructure.Repositories;
 using Microsoft.EntityFrameworkCore;
+using QuestPDF.Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
+QuestPDF.Settings.License = LicenseType.Community;
 // Permite usar controllers 
 builder.Services.AddControllers();
 // Add services to the container.
