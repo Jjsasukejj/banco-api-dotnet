@@ -71,12 +71,21 @@ namespace Banco.Api.Controllers
             if (request.SaldoInicial < 0)
                 return BadRequest("El saldo inicial no puede ser negativo.");
 
+            var cliente = await unitOfWork.Clientes.GetByClienteIdAsync(request.ClienteId);
+
+            if (cliente == null)
+            {
+                return BadRequest("El cliente no existe;");
+            }
+
             var cuenta = new Cuenta(
                 request.NumeroCuenta,
                 request.TipoCuenta,
                 request.SaldoInicial,
                 request.Estado,
                 request.ClienteId);
+
+            cuenta.AsignarCliente(cliente.Id);
 
             await unitOfWork.Cuentas.AddAsync(cuenta);
             await unitOfWork.SaveChangesAsync();

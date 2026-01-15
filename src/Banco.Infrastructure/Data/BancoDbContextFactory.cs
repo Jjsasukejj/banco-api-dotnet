@@ -14,7 +14,7 @@ namespace Banco.Infrastructure.Data
         {
             var optionsBuilder = new DbContextOptionsBuilder<BancoDbContext>();
             //cadena de conexion usada solo para tooling(migrations/scripts)
-            optionsBuilder.UseSqlServer("Server=localhost;Database=BancoDb;Trusted_Connection=True;TrustServerCertificate=True");
+            optionsBuilder.UseSqlServer("Server=localhost,1433;Database=BancoDb;User Id=sa;Password=Password123!;TrustServerCertificate=True;Encrypt=False");
 
             return new BancoDbContext(optionsBuilder.Options);
         }

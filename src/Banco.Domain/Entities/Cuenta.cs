@@ -29,6 +29,7 @@ namespace Banco.Domain.Entities
         /// Relacion con el cliente propietario
         /// </summary>
         public string ClienteId { get; private set; } = string.Empty;
+        public int ClienteDbId { get; private set; }
         public Cliente? Cliente { get; private set; }
         /// <summary>
         /// Movimientos asociados a la cuenta
@@ -69,6 +70,11 @@ namespace Banco.Domain.Entities
         {
             Saldo = movimiento.Saldo;
             _movimientos.Add(movimiento);
+        }
+
+        public void AsignarCliente(int clienteDbId)
+        {
+            ClienteDbId = clienteDbId;
         }
     }
 }
