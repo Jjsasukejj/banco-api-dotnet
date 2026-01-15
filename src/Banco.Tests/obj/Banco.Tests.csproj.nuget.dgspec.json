@@ -124,14 +124,14 @@
         }
       }
     },
-    "/Users/juliocadena/Documents/Devsu LLC/BancoSolution/src/Banco.Tests/Banco.Tests.csproj": {
+    "/Users/juliocadena/Documents/Devsu LLC/BancoSolution/src/Banco.Infrastructure/Banco.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/juliocadena/Documents/Devsu LLC/BancoSolution/src/Banco.Tests/Banco.Tests.csproj",
-        "projectName": "Banco.Tests",
-        "projectPath": "/Users/juliocadena/Documents/Devsu LLC/BancoSolution/src/Banco.Tests/Banco.Tests.csproj",
+        "projectUniqueName": "/Users/juliocadena/Documents/Devsu LLC/BancoSolution/src/Banco.Infrastructure/Banco.Infrastructure.csproj",
+        "projectName": "Banco.Infrastructure",
+        "projectPath": "/Users/juliocadena/Documents/Devsu LLC/BancoSolution/src/Banco.Infrastructure/Banco.Infrastructure.csproj",
         "packagesPath": "/Users/juliocadena/.nuget/packages/",
-        "outputPath": "/Users/juliocadena/Documents/Devsu LLC/BancoSolution/src/Banco.Tests/obj/",
+        "outputPath": "/Users/juliocadena/Documents/Devsu LLC/BancoSolution/src/Banco.Infrastructure/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/juliocadena/.nuget/NuGet/NuGet.Config"
@@ -170,9 +170,103 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Relational": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "QuestPDF": {
+              "target": "Package",
+              "version": "[2025.12.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.414/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/juliocadena/Documents/Devsu LLC/BancoSolution/src/Banco.Tests/Banco.Tests.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/juliocadena/Documents/Devsu LLC/BancoSolution/src/Banco.Tests/Banco.Tests.csproj",
+        "projectName": "Banco.Tests",
+        "projectPath": "/Users/juliocadena/Documents/Devsu LLC/BancoSolution/src/Banco.Tests/Banco.Tests.csproj",
+        "packagesPath": "/Users/juliocadena/.nuget/packages/",
+        "outputPath": "/Users/juliocadena/Documents/Devsu LLC/BancoSolution/src/Banco.Tests/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/juliocadena/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/Users/juliocadena/Documents/Devsu LLC/BancoSolution/src/Banco.Application/Banco.Application.csproj": {
+                "projectPath": "/Users/juliocadena/Documents/Devsu LLC/BancoSolution/src/Banco.Application/Banco.Application.csproj"
+              },
+              "/Users/juliocadena/Documents/Devsu LLC/BancoSolution/src/Banco.Domain/Banco.Domain.csproj": {
+                "projectPath": "/Users/juliocadena/Documents/Devsu LLC/BancoSolution/src/Banco.Domain/Banco.Domain.csproj"
+              },
+              "/Users/juliocadena/Documents/Devsu LLC/BancoSolution/src/Banco.Infrastructure/Banco.Infrastructure.csproj": {
+                "projectPath": "/Users/juliocadena/Documents/Devsu LLC/BancoSolution/src/Banco.Infrastructure/Banco.Infrastructure.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "FluentAssertions": {
+              "target": "Package",
+              "version": "[8.8.0, )"
+            },
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",
               "version": "[17.8.0, )"
+            },
+            "Moq": {
+              "target": "Package",
+              "version": "[4.20.72, )"
             },
             "coverlet.collector": {
               "target": "Package",

@@ -63,5 +63,24 @@ namespace Banco.Domain.Entities
             Contrasena = contrasena;
             Estado = estado;
         }
+        /// <summary>
+        /// Agrega una cuenta al cliente, controla la relacion Cliente - Cuenta dentro del dominio
+        /// </summary>
+        /// <param name="cuenta"></param>
+        public void AgregarCuenta(Cuenta cuenta)
+        {
+            if (cuenta == null)
+            {
+                throw new ArgumentNullException(nameof(cuenta));
+            }
+
+            //Regla de dominio 
+            if (cuenta.ClienteId != ClienteId)
+            {
+                throw new InvalidOperationException("La cuenta no pertenece a este cliente.");
+            }
+
+            _cuentas.Add(cuenta);
+        }
     }
 }
